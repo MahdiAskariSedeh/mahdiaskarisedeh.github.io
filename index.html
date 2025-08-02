@@ -11,96 +11,140 @@
       background: #121212;
       color: #e0e0e0;
       margin: 0;
-      padding: 0;
+      padding: 40px 20px;
     }
     .container {
-      max-width: 800px;
-      margin: 50px auto;
-      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin: auto;
+      padding: 40px;
       background: #1e1e1e;
-      border-radius: 12px;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+      border-radius: 16px;
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.6);
+      max-width: 1000px;
     }
-    h1, h2 {
-      color: #90caf9;
+    .left-panel {
+      flex: 1 1 250px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .right-panel {
+      flex: 2 1 500px;
     }
     .profile-pic {
-      width: 100px;
-      height: 100px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       object-fit: cover;
-      display: block;
-      margin: 0 auto 15px auto;
-      border: 2px solid #90caf9;
+      border: 3px solid #90caf9;
     }
-    .section {
-      margin-top: 30px;
+    .left-panel h1 {
+      font-size: 1.6rem;
+      color: #90caf9;
+      margin: 15px 0 10px;
     }
-    ul {
+    .contact-inline {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      width: 100%;
+      max-width: 200px;
+    }
+    .contact-inline a {
+      display: flex;
+      align-items: center;
+      color: #90caf9;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .contact-inline a i {
+      margin-right: 8px;
+    }
+    .contact-inline a:hover {
+      text-decoration: underline;
+    }
+    .resume-buttons {
+      margin-top: 15px;
+      display: flex;
+      gap: 10px;
+    }
+    .resume-buttons a {
+      background: #90caf9;
+      color: #121212;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .resume-buttons a:hover {
+      background: #64b5f6;
+    }
+    .right-panel h2 {
+      margin-top: 0;
+      color: #90caf9;
+    }
+    .right-panel ul {
       list-style: none;
       padding-left: 0;
     }
-    ul li::before {
+    .right-panel ul li::before {
       content: "\f0da";
       font-family: "Font Awesome 6 Free";
       font-weight: 900;
       color: #90caf9;
       margin-right: 10px;
     }
-    .contact a {
-      display: flex;
-      align-items: center;
-      color: #90caf9;
-      text-decoration: none;
-      margin-bottom: 10px;
-      font-size: 0.95rem;
-    }
-    .contact a i {
-      margin-right: 10px;
-    }
-    .contact a:hover {
-      text-decoration: underline;
+    .section {
+      margin-bottom: 30px;
     }
     .footer {
       text-align: center;
-      margin-top: 50px;
+      margin-top: 40px;
       color: #666;
-      font-size: 0.9em;
+      font-size: 0.85em;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=SJrkyKIAAAAJ&citpid=7" alt="Mahdi Askari-Sedeh" class="profile-pic" />
-    <h1>Mahdi Askari-Sedeh</h1>
-    <p style="text-align: center;">Mechanical Engineer passionate about smart materials, continuum mechanics, and computational modeling. Graduate of the University of Tehran.</p>
-
-    <div class="section">
-      <h2>🔬 Current Focus</h2>
-      <ul>
-        <li>Emerging materials and their computational behavior</li>
-        <li>Smart and multifunctional material systems</li>
-        <li>Continuum and solid mechanics</li>
-      </ul>
+    <div class="left-panel">
+      <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=SJrkyKIAAAAJ&citpid=7" alt="Mahdi Askari-Sedeh" class="profile-pic" />
+      <h1>Mahdi Askari-Sedeh</h1>
+      <div class="contact-inline">
+        <a href="mailto:mahdiaskarsedeh@ut.ac.ir"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://www.linkedin.com/in/mahdiaskarisedeh" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=SJrkyKIAAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i> Scholar</a>
+        <a href="https://orcid.org/0009-0004-9940-4941" target="_blank"><i class="fab fa-orcid"></i> ORCID</a>
+        <a href="https://www.researchgate.net/profile/Mahdi-Askari-Sedeh" target="_blank"><i class="fab fa-researchgate"></i> ResearchGate</a>
+      </div>
+      <div class="resume-buttons">
+        <a href="resume-en.pdf" target="_blank"><i class="fas fa-file-download"></i> Resume (EN)</a>
+        <a href="resume-fa.pdf" target="_blank"><i class="fas fa-file-download"></i> Resume (FA)</a>
+      </div>
     </div>
-
-    <div class="section">
-      <h2>📂 Projects & Research</h2>
-      <p>Working on cutting-edge research involving constitutive modeling of smart structures and finite element simulation for material analysis.</p>
+    <div class="right-panel">
+      <p>Mechanical Engineer passionate about smart materials, continuum mechanics, and computational modeling. Graduate of the University of Tehran.</p>
+      <div class="section">
+        <h2><i class="fas fa-flask"></i> Current Focus</h2>
+        <ul>
+          <li>Emerging materials and their computational behavior</li>
+          <li>Smart and multifunctional material systems</li>
+          <li>Continuum and solid mechanics</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2><i class="fas fa-folder"></i> Projects & Research</h2>
+        <p>Working on cutting-edge research involving constitutive modeling of smart structures and finite element simulation for material analysis.</p>
+      </div>
     </div>
-
-    <div class="section contact">
-      <h2>📬 Contact</h2>
-      <a href="mailto:mahdiaskarsedeh@ut.ac.ir"><i class="fas fa-envelope"></i> mahdiaskarsedeh@ut.ac.ir</a>
-      <a href="https://www.linkedin.com/in/mahdiaskarisedeh" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      <a href="https://scholar.google.com/citations?user=SJrkyKIAAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
-      <a href="https://orcid.org/0009-0004-9940-4941" target="_blank"><i class="fab fa-orcid"></i> ORCID</a>
-      <a href="https://www.researchgate.net/profile/Mahdi-Askari-Sedeh" target="_blank"><i class="fab fa-researchgate"></i> ResearchGate</a>
-    </div>
-
-    <div class="footer">
-      &copy; 2025 Mahdi Askari-Sedeh
-    </div>
+  </div>
+  <div class="footer">
+    &copy; 2025 Mahdi Askari-Sedeh
   </div>
 </body>
 </html>
