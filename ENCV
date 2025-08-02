@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1024, initial-scale=1" />
+  <title>Mahdi Askari-Sedeh - CV</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<style>
+  :root {
+    --dark-bg: #121218;
+    --sidebar: #11153f;
+    --right-bg: #ffffff;
+    --accent: #90caf9;
+    --text-dark: #263159;
+    --muted: #6f7b9c;
+    --radius: 12px;
+    --shadow: 0 12px 40px -10px rgba(0,0,0,0.35);
+    --font-stack: "Segoe UI",-apple-system,BlinkMacSystemFont,sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: linear-gradient(135deg,#0f1020 0%,#1f2230 70%);
+    font-family: var(--font-stack);
+    color: #e3e8ff;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .container {
+    max-width: 1100px;
+    margin: 40px auto 80px;
+    display: flex;
+    gap: 32px;
+    padding: 0;
+    min-height: 900px;
+    background: var(--sidebar);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .left-col {
+    flex:0 0 320px;
+    background: var(--sidebar);
+    padding: 36px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    color: #fff;
+  }
+  .user-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: url('https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=SJrkyKIAAAAJ&citpid=7') center/cover no-repeat;
+    border: 3px solid var(--accent);
+    margin-bottom: 18px;
+  }
+  .left-col h1 {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height:1.1;
+    text-align:center;
+    color: #fff;
+  }
+  .left-col h4 {
+    margin:6px 0 20px;
+    font-size: 1rem;
+    font-weight:500;
+    color: var(--accent);
+  }
+  .left-section {
+    width: 100%;
+    margin-bottom: 26px;
+  }
+  .left-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap:6px;
+    color: var(--accent);
+  }
+  .left-content {
+    font-size: 0.9rem;
+    line-height:1.4;
+    color: #d8e1ff;
+  }
+  .skill-bar {
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px;
+    margin: 6px 0 4px;
+    overflow: hidden;
+    position: relative;
+    height: 14px;
+  }
+  .skill-bar-inner {
+    height: 100%;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 6px;
+    font-size: 0.7rem;
+    font-weight:600;
+    border-radius: 8px;
+    position: relative;
+    transition: width .25s cubic-bezier(.4,.2,.2,1);
+  }
+  .right-col {
+    flex:1;
+    padding: 40px 48px;
+    overflow: auto;
+    background: var(--right-bg);
+    border-radius: 0 0 var(--radius) var(--radius);
+    color: var(--text-dark);
+  }
+  .section {
+    margin-bottom: 32px;
+  }
+  .section-title {
+    display: inline-block;
+    position: relative;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    padding-left: 10px;
+    color: var(--text-dark);
+  }
+  .section-title::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top:50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 100%;
+    background: var(--accent);
+    border-radius: 3px;
+  }
+  .section-content {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #2f3a5f;
+  }
+  .item {
+    margin-bottom: 14px;
+  }
+  .item strong {
+    display:block;
+    font-size:1rem;
+    margin-bottom:4px;
+    color:#1f2a50;
+  }
+  .meta {
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .research-list {
+    padding-left: 16px;
+    margin:0;
+    list-style: disc;
+  }
+  .research-list li {
+    margin-bottom: 14px;
+  }
+  .footer {
+    margin-top: 40px;
+    font-size: 0.75rem;
+    text-align:center;
+    color:#7a8aac;
+  }
+  @media (max-width: 1024px){
+    .container{flex-direction:column;}
+    .left-col{width:100%;flex:none;border-radius:0 0 var(--radius) var(--radius);}
+    .right-col{border-radius:0 0 var(--radius) var(--radius);}
+  }
+</style>
+
+</head>
+<body>
+  <div class="container">
+    <!-- Left sidebar -->
+    <div class="left-col">
+      <div class="user-image" aria-label="profile photo"></div>
+      <h1>Mahdi Askari-Sedeh</h1>
+      <h4>Mechanical Engineer</h4>
+
+      <div class="left-section">
+        <div class="left-title"><i class="fa-solid fa-envelope" style="margin-right:6px;"></i> Contact</div>
+        <div class="left-content">
+          <div>Email: <a href="mailto:mahdiaskarisedeh@gmail.com">mahdiaskarisedeh@gmail.com</a></div>
+          <div>LinkedIn: <a href="https://linkedin.com/in/mahdiaskarisedeh" target="_blank">mahdiaskarisedeh</a></div>
+        </div>
+      </div>
+
+      <div class="left-section">
+        <div class="left-title"><i class="fa-solid fa-user-graduate" style="margin-right:6px;"></i> Summary</div>
+        <div class="left-content">
+          Mechanical engineer specialized in modeling and advanced simulation of smart and soft materials.<br>
+          Experienced in automotive and mining industries.<br>
+          Proficient in 3D modeling, multiphysics simulation, and continuum mechanics.
+        </div>
+      </div>
+
+      <div class="left-section">
+        <div class="left-title"><i class="fa-solid fa-chart-simple" style="margin-right:6px;"></i> Skills</div>
+        <div class="left-content">
+          <div class="item">
+            <div style="display:flex;justify-content:space-between;font-size:0.75rem;">ICDL <span>80%</span></div>
+            <div class="skill-bar"><div class="skill-bar-inner" style="width:80%"></div></div>
+          </div>
+          <div class="item">
+            <div style="display:flex;justify-content:space-between;font-size:0.75rem;">COMSOL Multiphysics <span>80%</span></div>
+            <div class="skill-bar"><div class="skill-bar-inner" style="width:80%"></div></div>
+          </div>
+          <div class="item">
+            <div style="display:flex;justify-content:space-between;font-size:0.75rem;">ABAQUS <span>80%</span></div>
+            <div class="skill-bar"><div class="skill-bar-inner" style="width:80%"></div></div>
+          </div>
+          <div class="item">
+            <div style="display:flex;justify-content:space-between;font-size:0.75rem;">ANSYS Fluent <span>40%</span></div>
+            <div class="skill-bar"><div class="skill-bar-inner" style="width:40%"></div></div>
+          </div>
+          <div class="item">
+            <div style="display:flex;justify-content:space-between;font-size:0.75rem;">Project Management <span>60%</span></div>
+            <div class="skill-bar"><div class="skill-bar-inner" style="width:60%"></div></div>
+          </div>
+          <div class="item">
+            <div style="display:flex;justify-content:space-between;font-size:0.75rem;">SOLIDWORKS <span>60%</span></div>
+            <div class="skill-bar"><div class="skill-bar-inner" style="width:60%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="left-section">
+        <div class="left-title"><i class="fa-solid fa-language" style="margin-right:6px;"></i> Languages</div>
+        <div class="left-content">
+          <div><strong>English</strong>: Reading (4/5), Writing (3/5), Speaking (4/5), Listening (4/5)</div>
+		  <div><strong>Persian</strong>: Native</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right main -->
+    <div class="right-col">
+      <div class="section">
+        <div class="section-title">Education</div>
+        <div class="section-content">
+          <div class="item">
+            <strong>MSc, Mechanical Engineering – Solid Design</strong>
+            <div class="meta">University of Tehran, Tehran | Oct 2019 – May 2023 | GPA: 16.71</div>
+          </div>
+          <div class="item">
+            <strong>BSc, Mechanical Engineering – Solid Design</strong>
+            <div class="meta">Malayer University, Hamedan, Malayer | Oct 2015 – Aug 2019 | GPA: 19.12</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Experience</div>
+        <div class="section-content">
+          <div class="item">
+            <strong>Technical Expert</strong>
+            <div class="meta">Mes Derakhshan Takht Gonbad, Tehran | Dec 2022 – Feb 2023</div>
+          </div>
+          <div class="item">
+            <strong>Engineering Intern</strong>
+            <div class="meta">Zarrin Khodro Industries | Jul 2017 – Sep 2017</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Certificates &amp; Courses</div>
+        <div class="section-content">
+          <div class="item">ICDL (Technical and Vocational Institute) – 2013</div>
+          <div class="item">Principles of Thesis Writing (Islamic Azad University, Shahrekord Branch) – 2017</div>
+          <div class="item">Fluid Mechanics of Particle Transport and Deposition (Shahrood University of Technology) – 2017</div>
+          <div class="item">SolidWorks Training Course (Technical and Vocational) – 2015</div>
+          <div class="item">Basics of Pump Design (Shahrood University of Technology) – 2017</div>
+          <div class="item">Design of Microfluidic Systems (Shahrood University of Technology) – 2017</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Honors &amp; Awards</div>
+        <div class="section-content">
+          <div class="item">1st Rank in BSc Entry GPA – Malayer University, Aug 2019</div>
+          <div class="item">Top Rank in Computer Workshop Competitions – Isfahan Province, 2014</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Research</div>
+        <div class="section-content">
+          <ul class="research-list">
+            <li>
+              <strong>Modeling the edge warping in large strain rotating disks accounting for thickness reduction distribution</strong><br>
+              <a href="https://doi.org/10.1142/S1758825125500693" target="_blank">DOI:10.1142/S1758825125500693</a>
+            </li>
+            <li>
+              <strong>Hydrogel‐Based Capacitive Sensor Model for Ammonium Monitoring in Aquaculture</strong><br>
+              <a href="https://doi.org/10.1002/adem.202400314" target="_blank">DOI:10.1002/adem.202400314</a>
+            </li>
+            <li>
+              <strong>On the extension-torsion of short hyperelastic tubes of axially functionally-graded materials</strong><br>
+              <a href="https://doi.org/10.1016/j.engstruct.2023.117344" target="_blank">DOI:10.1016/j.engstruct.2023.117344</a>
+            </li>
+            <li>
+              <strong>pH-Sensitive hydrogel bilayers: Investigation on transient swelling-induced bending through analytical and FEM approaches</strong><br>
+              <a href="https://doi.org/10.3390/gels9070563" target="_blank">DOI:10.3390/gels9070563</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Projects</div>
+        <div class="section-content">
+          <div class="item">Reinforced Neural Network Approach for Swelling Dynamics in pH-sensitive Hydrogels (Apr 2025)</div>
+          <div class="item">Analytical Solution for Swelling of pH-sensitive Tough Hydrogel Cylinders (May 2023)</div>
+          <div class="item">Numerical Simulation of Laser Drilling Process in Nickel-based Superalloy (2018)</div>
+        </div>
+      </div>
+
+      <div class="footer">
+        Created by <a href="https://mahdiaskarisedeh.github.io/" style="color: var(--accent);">Mahdi Askari-Sedeh</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
