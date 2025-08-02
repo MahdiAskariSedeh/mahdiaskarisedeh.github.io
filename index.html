@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,11 +26,11 @@
       max-width: 1000px;
     }
     .left-panel {
-      flex: 1 1 250px;
-      text-align: center;
+      flex: 1 1 300px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      text-align: center;
     }
     .right-panel {
       flex: 2 1 500px;
@@ -44,32 +45,34 @@
     .left-panel h1 {
       font-size: 1.6rem;
       color: #90caf9;
-      margin: 15px 0 10px;
+      margin: 15px 0 20px;
     }
-    .contact-inline {
+    .contact-block {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-      width: 100%;
-      max-width: 200px;
+      grid-template-columns: repeat(2, auto);
+      justify-content: center;
+      gap: 10px 30px;
+      margin-bottom: 20px;
     }
-    .contact-inline a {
+    .contact-block a {
       display: flex;
       align-items: center;
       color: #90caf9;
       text-decoration: none;
       font-size: 0.9rem;
     }
-    .contact-inline a i {
+    .contact-block a i {
       margin-right: 8px;
     }
-    .contact-inline a:hover {
+    .contact-block a:hover {
       text-decoration: underline;
     }
     .resume-buttons {
-      margin-top: 15px;
+      margin-top: 10px;
       display: flex;
       gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
     .resume-buttons a {
       background: #90caf9;
@@ -115,12 +118,13 @@
     <div class="left-panel">
       <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=SJrkyKIAAAAJ&citpid=7" alt="Mahdi Askari-Sedeh" class="profile-pic" />
       <h1>Mahdi Askari-Sedeh</h1>
-      <div class="contact-inline">
+      <div class="contact-block">
         <a href="mailto:mahdiaskarsedeh@ut.ac.ir"><i class="fas fa-envelope"></i> Email</a>
         <a href="https://www.linkedin.com/in/mahdiaskarisedeh" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
         <a href="https://scholar.google.com/citations?user=SJrkyKIAAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i> Scholar</a>
         <a href="https://orcid.org/0009-0004-9940-4941" target="_blank"><i class="fab fa-orcid"></i> ORCID</a>
         <a href="https://www.researchgate.net/profile/Mahdi-Askari-Sedeh" target="_blank"><i class="fab fa-researchgate"></i> ResearchGate</a>
+        <a href="https://sciprofiles.com/profile/2994104" target="_blank"><i class="fas fa-globe"></i> SciProfile</a>
       </div>
       <div class="resume-buttons">
         <a href="resume-en.pdf" target="_blank"><i class="fas fa-file-download"></i> Resume (EN)</a>
